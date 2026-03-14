@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioPro | Premium Modern Portfolio Template</title>
+    
+    <meta name="description" content="PortfolioPro is a premium modern portfolio template built with HTML & Tailwind CSS. Fully responsive, SEO optimized, dark mode included.">
+    <meta name="keywords" content="portfolio template, modern portfolio, html tailwind portfolio, freelancer website, responsive portfolio">
+    <meta name="author" content="PortfolioPro">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://yourdomain.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PortfolioPro – Premium Modern Portfolio Template">
+    <meta property="og:description" content="Clean, modern and responsive portfolio template with dark mode and smooth animations.">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:image" content="assets/images/meta_image.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PortfolioPro – Premium Modern Portfolio Template">
+    <meta name="twitter:description" content="Premium HTML & Tailwind portfolio template.">
+    <meta name="twitter:image" content="assets/images/meta_image.jpg">
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3B82F6",
+                        secondary: "#8B5CF6",
+                        darkBg: "#0F172A",
+                        darkCard: "#1E293B"
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Poppins", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PortfolioPro",
+      "url": "https://yourdomain.com/",
+      "description": "Premium modern portfolio template built with HTML & Tailwind CSS."
+    }
+    </script>
+</head>
+
+<body class="font-sans bg-slate-50 text-slate-900 dark:bg-darkBg dark:text-slate-100">
+
+    <header class="fixed w-full z-50 glass-nav bg-white/80 dark:bg-darkBg/80 border-b border-slate-200 dark:border-slate-800">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold gradient-text">PortfolioPro</a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-primary transition dark:text-slate-300">Home</a>
+                    <a href="#work" class="hover:text-primary transition dark:text-slate-300">Work</a>
+                    <a href="#about" class="hover:text-primary transition dark:text-slate-300">about me</a>
+                    <a href="#services" class="hover:text-primary transition dark:text-slate-300">Services</a>
+                    <a href="#contact" class="hover:text-primary transition dark:text-slate-300">Contact</a>
+                    
+                    <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:ring-2 ring-primary transition">
+                        <i id="theme-icon" class="fas fa-moon text-primary"></i>
+                    </button>
+                </div>
+
+                <div class="md:hidden flex items-center space-x-4">
+                    <button id="mobile-theme-toggle" class="p-2 text-primary"><i class="fas fa-moon"></i></button>
+                    <button id="menu-btn" class="text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-4 border-t border-slate-100 dark:border-slate-800">
+                <a href="#home" class="block py-2 hover:text-primary">Home</a>
+                <a href="#work" class="block py-2 hover:text-primary">Work</a>
+                <a href="#about" class="block py-2 hover:text-primary">about me</a>
+                <a href="#services" class="block py-2 hover:text-primary">Services</a>
+                <a href="#contact" class="block py-2 hover:text-primary">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="pt-32 pb-20 px-6 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 z-10">
+                    <h1 class="text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
+                        Hi, I'm <span class="gradient-text">Alex</span><br>
+                        Creative Designer
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-lg">
+                        I create beautiful, functional digital experiences that help brands stand out in the digital landscape.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#work" class="bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-blue-500/30 hover:scale-105 transition">View Work</a>
+                        <a href="#contact" class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary/10 transition">Hire Me</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+                    <img src="/assets/images/home.jpg" alt="Alex" class="relative z-10 rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition duration-700 w-full max-w-md mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="work" class="py-24 bg-white dark:bg-darkBg/50">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-4xl font-display font-bold mb-4">Featured Work</h2>
+                <p class="text-slate-500 dark:text-slate-400">Selected projects that showcase design excellence.</p>
+            </div>
+             </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a href="https://your-project-link-1.com" target="_blank" class="project-card block relative group rounded-2xl overflow-hidden shadow-xl bg-slate-200 cursor-pointer">
+                <img src="/assets/images/project1.jpg" alt="P1" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="project-overlay absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/40 to-transparent opacity-0 group-hover:opacity-100 flex items-end p-8 transition duration-300">
+                    <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-white text-2xl font-bold mb-2">Modern E-com</h3>
+                        <p class="text-slate-300 mb-4">UI/UX Design & Branding</p>
+                        <span class="text-primary bg-white px-4 py-2 rounded-lg font-bold">View Project</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://your-project-link-2.com" target="_blank" class="project-card block relative group rounded-2xl overflow-hidden shadow-xl bg-slate-200 cursor-pointer">
+                <img src="/assets/images/project2.jpg" alt="P2" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="project-overlay absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/40 to-transparent opacity-0 group-hover:opacity-100 flex items-end p-8 transition duration-300">
+                    <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-white text-2xl font-bold mb-2">Fitness App</h3>
+                        <p class="text-slate-300 mb-4">Mobile Design</p>
+                        <span class="text-primary bg-white px-4 py-2 rounded-lg font-bold">View Project</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://your-project-link-3.com" target="_blank" class="project-card block relative group rounded-2xl overflow-hidden shadow-xl bg-slate-200 cursor-pointer">
+                <img src="/assets/images/project3.jpg" alt="P3" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="project-overlay absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/40 to-transparent opacity-0 group-hover:opacity-100 flex items-end p-8 transition duration-300">
+                    <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-white text-2xl font-bold mb-2">Saas Dashboard</h3>
+                        <p class="text-slate-300 mb-4">Development</p>
+                        <span class="text-primary bg-white px-4 py-2 rounded-lg font-bold">View Project</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+</div>
+    </div>
+</section>
+
+<section id="about" class="py-24 bg-slate-50 dark:bg-darkBg transition-colors">
+        <div class="container mx-auto px-6">
+             <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold mb-4">About me</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                
+                <div class="md:w-1/2 relative group">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <img 
+                        src="/assets/images/about.jpg" 
+                        alt="About Alex" 
+                        class="relative rounded-2xl shadow-2xl w-full object-cover aspect-[3/3]"
+                    >
+                    <div class="absolute -bottom-6 -right-6 bg-white dark:bg-darkCard p-6 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800">
+                        <p class="text-4xl font-bold text-primary">8+</p>
+                        <p class="text-sm font-medium text-slate-500">Years of Experience</p>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-display font-bold mb-6">Mastering the Art of <span class="gradient-text">Digital Storytelling</span></h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                        I'm a passionate designer and developer with a mission to create digital products that don't just work—they inspire. My approach combines aesthetic sensibility with technical rigor.
+                    </p>
+                    
+                    <div class="mb-10">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-check-circle text-primary mr-2"></i> Core Expertise
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 font-medium hover:border-primary transition cursor-default">UI/UX Design</span>
+                            <span class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 font-medium hover:border-primary transition cursor-default">React/Tailwind</span>
+                            <span class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 font-medium hover:border-primary transition cursor-default">Brand Identity</span>
+                            <span class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 font-medium hover:border-primary transition cursor-default">AI Development</span>
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold mb-4">My Services</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 hover:border-primary transition group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary text-2xl group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fas fa-bezier-curve"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
+                    <p class="text-slate-500 dark:text-slate-400">Crafting intuitive and engaging user journeys that convert visitors into loyal customers.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 hover:border-primary transition group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary text-2xl group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                    <p class="text-slate-500 dark:text-slate-400">Building lightning-fast, SEO-optimized websites using the latest modern frameworks.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 hover:border-primary transition group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary text-2xl group-hover:bg-primary group-hover:text-white transition">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Branding</h3>
+                    <p class="text-slate-500 dark:text-slate-400">Defining your visual identity through logos, typography, and color psychology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-primary dark:bg-blue-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-bold mb-4">Client testimonials <span class="text-blue-200">Industry Leaders</span></h2>
+                <p class="text-blue-100">Don't just take my word for it—here's what my clients say.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/15 transition group">
+                    <i class="fas fa-quote-left text-4xl text-blue-300/50 mb-6 block"></i>
+                    <p class="text-blue-50 text-lg italic mb-8 leading-relaxed">
+                        "Alex transformed our vision into a stunning reality. The new platform increased our user engagement by 150% in just two months."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://i.pravatar.cc/150?u=1" alt="Client" class="w-12 h-12 rounded-full border-2 border-white/50 mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Jenkins</h4>
+                            <p class="text-blue-200 text-sm">CEO @ TechFlow</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/15 transition">
+                    <i class="fas fa-quote-left text-4xl text-blue-300/50 mb-6 block"></i>
+                    <p class="text-blue-50 text-lg italic mb-8 leading-relaxed">
+                        "The most detail-oriented developer I've ever worked with. The dark mode implementation is flawless and the code is incredibly clean."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://i.pravatar.cc/150?u=2" alt="Client" class="w-12 h-12 rounded-full border-2 border-white/50 mr-4">
+                        <div>
+                            <h4 class="font-bold">Marcus Chen</h4>
+                            <p class="text-blue-200 text-sm">Founder @ AppVantage</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/15 transition">
+                    <i class="fas fa-quote-left text-4xl text-blue-300/50 mb-6 block"></i>
+                    <p class="text-blue-50 text-lg italic mb-8 leading-relaxed">
+                        "Professional, responsive, and creative. Alex delivered our brand identity ahead of schedule and exceeded every expectation."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://i.pravatar.cc/150?u=3" alt="Client" class="w-12 h-12 rounded-full border-2 border-white/50 mr-4">
+                        <div>
+                            <h4 class="font-bold">Elena Rodriguez</h4>
+                            <p class="text-blue-200 text-sm">Marketing Lead @ Bloom</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="contact" class="py-24 bg-white dark:bg-darkBg/50">
+    <div class="container mx-auto px-6 max-w-4xl">
+        <div class="bg-slate-100 dark:bg-darkCard rounded-3xl p-8 md:p-12 shadow-2xl">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-display font-bold mb-2">Let's Work Together</h2>
+                <p class="text-slate-500 dark:text-slate-400">Ready to start your next big project?</p>
+            </div>
+            <form id="contactForm" action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" name="name" placeholder="Full Name" required 
+                        class="w-full px-6 py-4 rounded-xl bg-white dark:bg-darkBg border border-slate-200 dark:border-slate-800 focus:ring-2 ring-primary outline-none transition-all">
+                    
+                    <input type="email" name="email" placeholder="Email Address" required 
+                        class="w-full px-6 py-4 rounded-xl bg-white dark:bg-darkBg border border-slate-200 dark:border-slate-800 focus:ring-2 ring-primary outline-none transition-all">
+                </div>
+                
+                <textarea name="message" placeholder="Your Message" rows="5" required
+                    class="w-full px-6 py-4 rounded-xl bg-white dark:bg-darkBg border border-slate-200 dark:border-slate-800 focus:ring-2 ring-primary outline-none transition-all"></textarea>
+                
+                <button type="submit" id="submitBtn" 
+                    class="w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 hover:bg-blue-600 transition-all flex items-center justify-center gap-2">
+                    <span>Send Message</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+  <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold gradient-text mb-4">PortfolioPro</h3>
+                    <p class="text-gray-400 mb-6">
+                        Creating digital experiences that inspire and engage. Let's build something amazing together.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#work" class="text-gray-400 hover:text-white transition">Work</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Design Street, Creative City</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>hello@portfoliopro.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2026 PortfolioPro. All rights reserved. 
+                    |<button onclick="openModal('privacyModal')" class="hover:text-blue-500 transition">Privacy Policy</button>
+<span class="mx-2">|</span>
+<button onclick="openModal('termsModal')" class="hover:text-blue-500 transition">Terms of Service</button></p>
+            </div>
+        </div>
+    </footer>
+    <div id="privacyModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="bg-white dark:bg-slate-900 w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-3xl p-8 shadow-2xl relative">
+        <button onclick="closeModal('privacyModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">✕</button>
+        <h2 class="text-3xl font-bold mb-6 text-blue-600">Privacy Policy</h2>
+        <div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
+            <p><strong>1. Information Collection:</strong> We collect information when you use our contact form. This includes your name and email address.</p>
+            <p><strong>2. Usage:</strong> Your data is used solely to respond to your inquiries through the Formspree service.</p>
+            <p><strong>3. Security:</strong> We implement standard security measures to protect your personal information.</p>
+        </div>
+    </div>
+</div>
+
+<div id="termsModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="bg-white dark:bg-slate-900 w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-3xl p-8 shadow-2xl relative">
+        <button onclick="closeModal('termsModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">✕</button>
+        <h2 class="text-3xl font-bold mb-6 text-blue-600">Terms of Service</h2>
+        <div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
+            <p><strong>1. Template Usage:</strong> By using this template, you agree to these terms.</p>
+            <p><strong>2. Contact:</strong> Communication through our contact form is subject to our review and response policies.</p>
+            <p><strong>3. Modifications:</strong> We reserve the right to update these terms at any time without prior notice.</p>
+        </div>
+    </div>
+</div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

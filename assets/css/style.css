@@ -1,0 +1,42 @@
+/* Custom CSS Variables & Utils */
+.gradient-text {
+    background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Animations & Hover Effects */
+.project-card:hover .project-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark Mode Transition */
+body { 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Scrollbar Customization (Optional for Premium Look) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.dark ::-webkit-scrollbar-track {
+    background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+    background: #3B82F6;
+    border-radius: 10px;
+}

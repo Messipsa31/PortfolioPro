@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | PortfolioPro - Premium Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        code { font-family: 'JetBrains Mono', monospace; font-size: 0.9em; }
+        .sidebar-link.active { border-right: 4px solid #3b82f6; background-color: #eff6ff; color: #1d4ed8; }
+        .image-placeholder { background: #e2e8f0; border: 2px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; color: #64748b; border-radius: 12px; margin: 20px 0; min-height: 250px; }
+        pre { background: #1e293b; color: #f8fafc; padding: 1.25rem; border-radius: 0.75rem; border-left: 4px solid #3b82f6; overflow-x: auto; }
+    
+   
+@media (max-width: 1023px) {
+    aside { display: none !important; } 
+    main { padding: 1.5rem !important; } 
+}
+
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr; 
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.grid img {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    object-fit: cover; 
+    display: block;
+}
+
+
+pre {
+    white-space: pre-wrap; 
+    word-break: break-all;
+}
+    
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <div class="flex">
+        <aside class="w-72 h-screen bg-white border-r border-slate-200 sticky top-0 hidden lg:block overflow-y-auto">
+            <div class="p-8">
+                <div class="flex items-center gap-2 mb-10">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">P</div>
+                    <span class="text-xl font-bold tracking-tight">Portfolio<span class="text-blue-600">Pro</span></span>
+                </div>
+                
+                <nav class="space-y-1">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Getting Started</p>
+                    <a href="#intro" class="sidebar-link block px-4 py-2 text-slate-600 hover:text-blue-600 rounded-md transition">Introduction</a>
+                    <a href="#structure" class="sidebar-link block px-4 py-2 text-slate-600 hover:text-blue-600 rounded-md transition">File Structure</a>
+                    
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-8 mb-4">Configuration</p>
+                    <a href="#editing" class="sidebar-link block px-4 py-2 text-slate-600 hover:text-blue-600 rounded-md transition">HTML Customization</a>
+                    <a href="#editing_img" class="sidebar-link block px-4 py-2 text-slate-600 hover:text-blue-600 rounded-md transition">Editing Images</a>
+                    <a href="#contact" class="sidebar-link block px-4 py-2 text-slate-600 hover:text-blue-600 rounded-md transition">Contact Form Setup</a>
+                    <a href="#legal" class="sidebar-link block px-4 py-2 text-slate-600 hover:text-blue-600 rounded-md transition">Editing Privacy Policy & Terms of Service</a>
+                    
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-8 mb-4">Support</p>
+                    <a href="#support" class="sidebar-link block px-4 py-2 text-slate-600 hover:text-blue-600 rounded-md transition">Help Center</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-6 md:p-16">
+            <div class="max-w-4xl mx-auto">
+                
+                <section id="intro" class="mb-20">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase">v1.0.0 Release</span>
+                    <h1 class="text-5xl font-extrabold mt-4 mb-6 tracking-tight">Documentation</h1>
+                    <p class="text-xl text-slate-600 leading-relaxed">
+                        First of all, thank you for choosing <strong>PortfolioPro</strong>. This documentation covers the installation and usage of this template. Whether you are a pro developer or a beginner, this guide will help you get your site live in minutes.
+                    </p>
+                    <section class="mt-10">
+    <h2 class="text-2xl font-bold mb-6">Site Preview</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+            <img src="img/screenshot1.jpg" alt="Light Mode" class="rounded-lg shadow-sm">
+            <p class="text-center text-xs text-slate-500 mt-3">Home - Light Mode</p>
+        </div>
+
+        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+            <img src="img/screenshot2.jpg" alt="Dark Mode" class="rounded-lg shadow-sm">
+            <p class="text-center text-xs text-slate-500 mt-3">Home - Dark Mode</p>
+        </div>
+
+       
+        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+            <img src="img/screenshot4.jpg" alt="About Section" class="rounded-lg shadow-sm">
+            <p class="text-center text-xs text-slate-500 mt-3">About me Section</p>
+        </div>
+
+    </div>
+</section>
+                </section>
+
+                <hr class="my-16 border-slate-200">
+
+                <section id="structure" class="mb-20">
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3 text-red-600">
+                        <span class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-sm">01</span>
+                        File Structure
+                    </h2>
+                    <p class="text-slate-600 mb-6">Extract the zip file to see the clean and organized folder structure:</p>
+                    <pre>
+PortfolioPro/
+├── assets/
+│   ├── css/
+│   │   └── style.css       <span class="text-slate-500"># Custom styles & animations</span>
+│   ├── js/
+│   │   └── script.js      <span class="text-slate-500"># Theme & Mobile Menu logic</span>
+│   └── images/            <span class="text-slate-500"># All local assets</span>
+├── documentation/         <span class="text-slate-500"># This help guide</span>
+│   ├──index.html/
+│   └──img/
+├── index.html             <span class="text-slate-500"># Main template file</span>
+└── LICENSE.txt            <span class="text-slate-500"># Usage rights</span></pre>
+                </section>
+
+               <section id="editing" class="mb-16">
+               <h2 class="text-3xl font-bold mb-6 flex items-center gap-3 text-red-600">
+                        <span class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-sm">02</span>
+                        Editing Content
+                    </h2> <p class="text-slate-600">To change text, find the comments in <code>index.html</code>:</p>
+                <pre><code>&lt;!-- EDIT CONTENT HERE --&gt;
+&lt;h1&gt;Hi, I'm Your Name&lt;/h1&gt;
+&lt;p&gt;UX/UI Designer & Developer&lt;/p&gt;</code></pre>
+                
+               <div class="my-6 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+    <img src="img/vs-code-guide1.jpg" alt="VS Code Screenshot" class="w-full h-auto">
+    <p class="text-center text-sm text-slate-500 py-2 bg-slate-50 italic">
+        Figure 1: VS Code showing how to edit the content
+    </p>
+</div>
+            </section>
+                <section id="editing_img" class="mb-16">
+                   <h2 class="text-3xl font-bold mb-6 flex items-center gap-3 text-red-600">
+                        <span class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-sm text-red-600">03</span>
+                        Editing Images
+                    </h2>
+                     <p class="text-slate-600 mb-4">Go to <code>assets/images/</code> and replace the images with your own files using the same names, or update the paths in the HTML:</p>
+                    <pre><code>&lt;img src="/assets/images/your-photo.jpg" alt="Description"&gt;</code></pre>
+                    
+                    <div class="my-6 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+    <img src="img/vs-code-guide2.jpg" alt="VS Code Screenshot" class="w-full h-auto">
+    <p class="text-center text-sm text-slate-500 py-2 bg-slate-50 italic">
+        Figure 1: VS Code showing how to update image paths
+    </p>
+</div>
+                </section>
+                
+
+                <section id="contact" class="mb-20">
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3 text-red-600">
+                        <span class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-sm text-red-600">04</span>
+                        Contact Form Setup
+                    </h2>
+                    <p class="text-slate-600 mb-6">This template uses <strong>Formspree</strong> for the contact form. No PHP is required!</p>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3">
+                            <span class="font-bold text-blue-600">Step 1:</span> Get your unique ID from <a href="https://formspree.io" class="underline">Formspree.io</a>.
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="font-bold text-blue-600">Step 2:</span> Find the form tag in <code>index.html</code>.
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="font-bold text-blue-600">Step 3:</span> Update the action attribute:
+                        </li>
+                    </ul>
+                    <pre class="mt-4"><code>&lt;form action="https://formspree.io/f/YOUR_ID" method="POST"&gt;</code></pre>
+
+                    <div class="my-6 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+    <img src="img/vs-code-guide3.jpg" alt="VS Code Screenshot" class="w-full h-auto">
+    <p class="text-center text-sm text-slate-500 py-2 bg-slate-50 italic">
+        Figure 1: VS Code showing how to update Contact Form
+    </p>
+</div>
+                </section>
+
+                <section id="legal" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3 text-red-600">
+                        <span class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-sm text-red-600">05</span>
+                        Privacy Policy & Terms of Service
+                    </h2>
+    
+    <p class="text-slate-600 mb-4">To ensure your site is professional, we integrated legal modals. You don't need separate HTML files; everything is in <code>index.html</code>.</p>
+    
+    <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+        <p class="text-sm font-semibold text-blue-800 mb-2">How to edit the legal text:</p>
+        <ol class="list-decimal ml-5 text-sm text-blue-900 space-y-2">
+            <li>Open <code>index.html</code>.</li>
+            <li>Search for <code>id="privacyModal"</code> or <code>id="termsModal"</code>.</li>
+            <li>Change the placeholder text inside the <code>&lt;p&gt;</code> tags to match your personal or company information.</li>
+        </ol>
+    </div>
+    <div class="my-6 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+    <img src="img/vs-code-guide4.jpg" alt="VS Code Screenshot" class="w-full h-auto">
+    <p class="text-center text-sm text-slate-500 py-2 bg-slate-50 italic">
+        Figure 1: VS Code showing how to update Privacy Policy & Terms of Service
+    </p>
+</div>
+</section>
+
+               <section id="support" class="bg-slate-900 rounded-3xl p-10 text-white relative overflow-hidden">
+    <div class="relative z-10">
+        <h2 class="text-3xl font-bold mb-4 text-blue-400">Still Need Help?</h2>
+        <p class="text-slate-400 mb-8 max-w-md">
+            We typically respond within 24–48 hours to any support inquiries regarding the template.
+        </p>
+        <a href="mailto:nabtimissipsa31@gmail.com?subject=PortfolioPro Support Request"
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition">
+            Open a Support Ticket
+        </a>
+    </div>
+    <div class="absolute right-0 bottom-0 opacity-10 translate-x-1/4 translate-y-1/4">
+        <svg width="400" height="400" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+        </svg>
+    </div>
+</section>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
